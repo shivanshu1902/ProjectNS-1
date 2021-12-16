@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    position: relative;
+    margin: 50px;
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    min-height: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, .1);
+}
+.left-side {
+    position: relative;
+    background: black;
+    padding: 40px;
+}
+.profile-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+}
+.img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: auto;
+}
+.img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+.profile-text h2 {
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profile-text h2 span {
+    font-size: .8em;
+    font-weight: 300;
+}
+.contact-info {
+    padding-top: 40px;
+}
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contact-info ul {
+    position: relative;
+}
+.contact-info ul li {
+    list-style: none;
+    position: relative;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+.contact-info .icon {
+    display: inline-block;
+    width: 20px;
+    font-size: 18px;
+    color: #03a9f4;  
+}
+.contact-info span {
+    color: #fff;
+    font-weight: 300;
+}
+.contact-info.education li{
+    margin-bottom: 15px;
+}
+.contact-info.education h5 {
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contact-info.education .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contact-info.education .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.contact-info.Language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contact-info.Language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.right-side {
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about {
+    margin-bottom: 50px;
+}
+.about:last-child {
+    margin-bottom: 0;
+}
+.title2 {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.about p {
+    color: #333;
+}
+.about .box {
+    display: flex;
+    flex-direction: none;
+    margin: 20px 0;
+}
+.year-company {
+    min-width: 150px
+}
+.year-company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.text2 h4 {
+    text-transform: uppercase;
+    color: #03a9f4;
+    font-size: 16px;
+}
+.year {
+    min-width: 150px;
+}
+.year h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.interest ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li {
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0px ;
+}
+.interest ul li i {
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+    margin-right: 2px;
+}
+
+@media (max-width:1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .interest ul {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:600px) {
+    .about .box {
+        flex-direction: column;
+    }
+    .about .box h5 {
+        margin-bottom: 5px;
+    }
+    .interest ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skill .box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
